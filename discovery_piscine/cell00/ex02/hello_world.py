@@ -1,1 +1,1 @@
-print('hello world'.capitalize())
+print('Hello World')

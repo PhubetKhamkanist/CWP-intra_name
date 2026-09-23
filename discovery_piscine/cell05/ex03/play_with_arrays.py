@@ -8,7 +8,8 @@ def main():
     # บวก 2 ทุกตัว แล้วเก็บเฉพาะตัวที่ผลลัพธ์มากกว่า 5
     new_lst = [i + 2 for i in lst if i + 2 > 5]
     print(lst)
-    print(new_lst)
+    # แปลงเป็น set เพื่อตัดค่าที่ซ้ำกันออก
+    print(set(new_lst))
 
 
 main()

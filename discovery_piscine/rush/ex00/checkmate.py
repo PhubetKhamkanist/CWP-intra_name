@@ -18,6 +18,12 @@ def checkmate(board):
         if len(data) != n * n:
             print("Fail")
             return
+        # จำนวนช่องรวมเป็นจัตุรัสก็ยังไม่พอ เช่น 2x8 = 16 = 4x4
+        # ต้องมี n แถว และทุกแถวยาว n ช่องพอดี
+        rows = board.strip('\n').split('\n')
+        if len(rows) != n or any(len(row) != n for row in rows):
+            print("Fail")
+            return
 
         # จัดตัวอักษรทั้งหมดให้เป็นตาราง n แถว n หลัก
         data = data.reshape(n, n)
